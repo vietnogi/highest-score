@@ -6,4 +6,5 @@
 `npm install`
 
 # Run
-`npm run-script start`
+`npm run-script start ./exampleData.txt 3`
+`npm run-script start ./exampleDataError.txt 3`
