@@ -24,10 +24,9 @@ readInterface.on('line', (line) => {
   }
 
   const [original, id, jsonString] = matchParts
-  let jsonParsed
 
   try {
-    jsonParsed = JSON.parse(jsonString)
+    const jsonParsed = JSON.parse(jsonString)
 
     scores.push({
       id,
