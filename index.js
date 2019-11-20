@@ -53,7 +53,11 @@ readInterface.on('close', (line) => {
     return 0
   })
 
-  console.log(reverseSortedScores.slice(0, maxOutputNumber))
+  console.log(
+    JSON.stringify(
+      reverseSortedScores.slice(0, maxOutputNumber)
+    )
+  )
 
   process.exit(0)
 })
