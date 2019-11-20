@@ -23,14 +23,14 @@ readInterface.on('line', (line) => {
     process.exit(1)
   }
 
-  const [original, id, jsonString] = matchParts
+  const [original, score, jsonString] = matchParts
 
   try {
     const jsonParsed = JSON.parse(jsonString)
 
     scores.push({
-      id,
-      score: jsonParsed.value,
+      score: Number(score),
+      id: jsonParsed.id,
     })
   } catch (error) {
     // Note that one of the entries, for score `11025835`, has a document portion that is _not_ JSON. If this line was included in the result set, then the program should error, but if not then it should continue.
